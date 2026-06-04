@@ -1,0 +1,12 @@
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+backend/.env
+backend/db/*.db
+backend/public/
+frontend/dist/
+.DS_Store
+*.log
+screenshot*.png
+screenshot.mjs
+master_prompt.md

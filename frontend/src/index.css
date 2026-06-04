@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* react-calendar 커스텀 */
+.react-calendar {
+  @apply w-full border-none bg-transparent;
+}
+.react-calendar__tile--active {
+  @apply bg-indigo-500 text-white rounded-lg;
+}
+.react-calendar__tile:hover {
+  @apply bg-indigo-100 rounded-lg;
+}
+.react-calendar__navigation button:hover {
+  @apply bg-indigo-100 rounded-lg;
+}

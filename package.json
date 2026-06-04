@@ -1,0 +1,11 @@
+{
+  "name": "my-planner",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build && cp -r dist ../backend/public",
+    "start": "node backend/server.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
