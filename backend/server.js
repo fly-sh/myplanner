@@ -17,6 +17,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// ✅ /health는 DB 초기화 전에 먼저 등록 — Railway healthcheck 통과용
+app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
 async function startServer() {
   await initDB();
 
@@ -46,7 +49,6 @@ async function startServer() {
   app.use('/notes', noteRoutes);
   app.use('/push', pushRoutes);
   app.use('/chat', chatRoutes);
-  app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
   // 프로덕션에서 빌드된 프론트엔드 서빙
   if (isProd) {
