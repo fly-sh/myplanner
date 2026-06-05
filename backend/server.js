@@ -66,5 +66,8 @@ async function startServer() {
 
 startServer().catch(err => {
   console.error('[서버 시작 실패]', err.message);
+  console.error('[에러 상세]', err.stack);
+  console.error('[환경변수 확인] DATABASE_URL:', process.env.DATABASE_URL ? '✅ 있음' : '❌ 없음');
+  console.error('[환경변수 확인] NODE_ENV:', process.env.NODE_ENV);
   process.exit(1);
 });
